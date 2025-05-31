@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+  /* General Styles */
+.trending-container {
+    padding: 20px;
+}
+
+.trending-header {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.trending-cards-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+}
+
+.trending-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    overflow: hidden;
+}
+
+.card-image-container {
+    position: relative;
+    height: 140px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card-options span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card-logo-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.card-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #87CEEB; /* Placeholder color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8em;
+    margin-right: 8px;
+}
+
+.card-info-text {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card-sponsored {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Responsive Styles for screens smaller than 450px */
+@media (max-width: 450px) {
+    .trending-header {
+        font-size: 1.2em; /* Smaller header for small screens */
+        margin-bottom: 10px;
+    }
+
+    .trending-cards-wrapper {
+        flex-direction: column; /* Stack the cards vertically */
+        gap: 15px; /* Reduce space between cards */
+        overflow-x: visible; /* Disable horizontal scroll */
+    }
+
+    .trending-card {
+        width: 100%; /* Cards take full width on small screens */
+        margin: 0 auto; /* Center cards */
+    }
+
+    .card-image-container {
+        height: 120px; /* Reduce image height */
+    }
+
+    .card-title {
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    .card-info-text {
+        font-size: 0.8em; /* Reduce font size */
+    }
+
+    .card-sponsored {
+        font-size: 0.7em; /* Reduce sponsored text size */
+    }
+
+    .card-options {
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .card-logo {
+        width: 18px;
+        height: 18px;
+        font-size: 0.7em;
+    }
+
+    .card-logo-info {
+        margin-bottom: 3px; /* Reduce margin between logo and text */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="inspiration-brands-container">
+        <div class="inspiration-section">
+            <h2 class="inspiration-title">Inspiration <span style="color: #ff5722;">🔥</span></h2>
+            <p class="inspiration-subtitle">See what's the trend now</p>
+        </div>
+      
+        <div class="brands-section">
+            <h3 class="brands-title">Brands</h3>
+            <div class="brand-logo-container">
+                <div class="brand-logo"></div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="trending-container">
+        <h2 class="trending-header">Trending</h2>
+        <div class="trending-cards-wrapper">
+            <div class="trending-card">
+                <div class="card-image-container">
+                    <img src="https://thumbs.dreamstime.com/b/big-ben-westminster-bridge-river-thames-london-uk-sunny-day-english-symbol-lovely-puffy-clouds-57359222.jpg" alt="London" class="card-image">
+                    <div class="card-options">
+                        <i class="bi bi-camera"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Top Wishes London</h3>
+                    <div class="card-logo-info">
+                        <div class="card-logo">G</div>
+                        <p class="card-info-text">GoWish</p>
+                    </div>
+                    <p class="card-sponsored">Sponsored</p>
+                </div>
+            </div>
+            <div class="trending-card">
+              <div class="card-image-container">
+                  <img src="https://thumbs.dreamstime.com/b/big-ben-westminster-bridge-river-thames-london-uk-sunny-day-english-symbol-lovely-puffy-clouds-57359222.jpg" alt="London" class="card-image">
+                  <div class="card-options">
+                      <i class="bi bi-camera"></i>
+                  </div>
+              </div>
+              <div class="card-content">
+                  <h3 class="card-title">Top Wishes London</h3>
+                  <div class="card-logo-info">
+                      <div class="card-logo">G</div>
+                      <p class="card-info-text">GoWish</p>
+                  </div>
+                  <p class="card-sponsored">Sponsored</p>
+              </div>
+          </div>
+      
+            <div class="trending-card">
+                <div class="card-image-container">
+                    <img src="https://media.gettyimages.com/id/168822497/photo/summer-of-helsinki-finland.jpg?s=612x612&w=gi&k=20&c=7WOd4KuARRYg1FK4dKSaTgKAcra2keHHlq6cqtn5tWI=" alt="Helsinki" class="card-image">
+                    <div class="card-options">
+                      <i class="bi bi-camera"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Top Wishes Helsinki</h3>
+                    <div class="card-logo-info">
+                        <div class="card-logo">G</div>
+                        <p class="card-info-text">GoWish</p>
+                    </div>
+                    <p class="card-sponsored">Sponsored</p>
+                </div>
+            </div>
+      
+            <div class="trending-card">
+                <div class="card-image-container">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/stockholm-sweden-scenic-summer-sunset-view-with-royalty-free-image-1713459498.jpg" alt="Stockholm" class="card-image">
+                    <div class="card-options">
+                      <i class="bi bi-camera"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Top Wishes Stockholm</h3>
+                    <div class="card-logo-info">
+                        <div class="card-logo">G</div>
+                        <p class="card-info-text">GoWish</p>
+                    </div>
+                    <p class="card-sponsored">Sponsored</p>
+                </div>
+            </div>
+            <div class="trending-card">
+              <div class="card-image-container">
+                  <img src="https://thumbs.dreamstime.com/b/big-ben-westminster-bridge-river-thames-london-uk-sunny-day-english-symbol-lovely-puffy-clouds-57359222.jpg" alt="London" class="card-image">
+                  <div class="card-options">
+                      <i class="bi bi-camera"></i>
+                  </div>
+              </div>
+              <div class="card-content">
+                  <h3 class="card-title">Top Wishes London</h3>
+                  <div class="card-logo-info">
+                      <div class="card-logo">G</div>
+                      <p class="card-info-text">GoWish</p>
+                  </div>
+                  <p class="card-sponsored">Sponsored</p>
+              </div>
+          </div>
+          <div class="trending-card">
+            <div class="card-image-container">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/stockholm-sweden-scenic-summer-sunset-view-with-royalty-free-image-1713459498.jpg" alt="Stockholm" class="card-image">
+                <div class="card-options">
+                  <i class="bi bi-camera"></i>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Top Wishes Stockholm</h3>
+                <div class="card-logo-info">
+                    <div class="card-logo">G</div>
+                    <p class="card-info-text">GoWish</p>
+                </div>
+                <p class="card-sponsored">Sponsored</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>     
+</body>
+</html>
