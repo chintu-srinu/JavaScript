@@ -1,0 +1,639 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workaholic Vibe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        /* General Styles */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Adjust aspect ratio as needed */
+}
+
+.workaholic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wishlist-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.share-button {
+    background-color: #e0f7fa;
+    color: #00bcd4;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.share-icon {
+    margin-right: 5px;
+}
+
+.more-options {
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    background-color: #00bcd4;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #555;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.overview-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.wish-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.new-wish-card {
+    border: 1px dashed #ccc;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: #00bcd4;
+    cursor: pointer;
+}
+
+.add-icon {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.new-wish-text {
+    font-size: 14px;
+}
+
+.followers-info {
+    color: #00bcd4;
+    font-size: 14px;
+}
+
+/* Responsive Media Query for Screens Smaller than 450px */
+@media (max-width: 449px) {
+
+    /* Container adjustments */
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    /* Image adjustments */
+    .image-wrapper {
+        aspect-ratio: 4 / 3; /* Adjust aspect ratio for smaller screens */
+    }
+
+    /* Wishlist Header adjustments */
+    .wishlist-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wishlist-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+    }
+
+    .search-icon,
+    .share-button,
+    .more-options {
+        margin-right: 5px;
+    }
+
+    /* User info adjustments */
+    .user-info {
+        margin-bottom: 10px;
+    }
+
+    /* Navigation adjustments */
+    .navigation {
+        margin-bottom: 15px;
+    }
+
+    /* New wish card adjustments */
+    .new-wish-card {
+        width: 100%;
+        max-width: 150px; /* Maintain a max width */
+    }
+
+    .wish-item-container {
+        justify-content: flex-start; /* Align items to start */
+    }
+
+    /* Button adjustments */
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230715/pngtree-d-rendering-of-a-relaxed-brunette-man-working-from-home-on-image_3850186.jpg" alt="" class="workaholic-image">
+        </div>
+        </div>
+
+    <div class="wishlist-container">
+        <div class="wishlist-header">
+            <h1 class="wishlist-title">My wishlist</h1>
+            <div class="header-actions">
+                <nav class="navbar bg-body-tertiary">
+                    <form class="container-fluid">
+                      <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                    </form>
+                  </nav>
+
+                   <a class="nav-link share-icon" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-share"></i></a>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <i class="bi bi-person-circle"></i>
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    
+  </div>
+  <div class="offcanvas-body">
+    <nav class="navbar bg-body-tertiary">
+      
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand copy-link" href="#"> <i class="bi bi-copy"></i> CopyLink</a>
+        </div>
+      </nav>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#"> <i class="bi bi-facebook"></i>  Facebook</a>
+        </div>
+      </nav>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#"> <i class="bi bi-people-fill"></i> Gowish </a>
+        </div>
+      </nav>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#"><i class="bi bi-envelope-arrow-up"></i> E-mail </a>
+        </div>
+      </nav>
+    </nav>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="bi bi-qr-code"></i> Share QR Code </a>
+      </div>
+    </nav>
+  </div>
+</div>    
+                <span class="more-options"><i class="bi bi-three-dots"></i></span>
+            </div>
+            
+        </div>
+        
+
+
+            <button id="wishButton">
+                +
+                New Wish
+            </button>
+        
+            <div id="imageContainer">
+                </div>
+        
+            <div id="inputModal" style="display: none;">
+                <div class="input-container">
+                    <input type="text" id="imageUrl" placeholder="Paste image URL here">
+                    <button id="addImageButton">Add Image</button>
+                </div>
+            </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+<script src="./project3.js" type="module" >
+    
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workaholic Vibe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+          .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .workaholic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Added for better small-screen behavior */
+    gap: 10px; /* Added gap for spacing in wrapped layout */
+  }
+
+  .wishlist-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0; /* Reset default margin-bottom */
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Added gap for spacing between buttons */
+  }
+
+  .search-icon {
+    margin-right: 0;
+    cursor: pointer;
+  }
+
+  .share-button {
+    background-color: #e0f7fa;
+    color: #00bcd4;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .share-icon {
+    margin-right: 5px;
+  }
+
+  .more-options {
+    cursor: pointer;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .user-avatar {
+    background-color: #00bcd4;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .user-name {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .back-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  .overview-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .wish-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .new-wish-card {
+    border: 1px dashed #ccc;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: #00bcd4;
+    cursor: pointer;
+    position: relative; /* Make sure the card is a positioning context */
+  }
+
+  .add-icon {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  .new-wish-text {
+    font-size: 14px;
+  }
+
+  .followers-info {
+    color: #00bcd4;
+    font-size: 14px;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 150px;
+    border-radius: 8px;
+  }
+
+  /* Input Styles */
+  .image-input-container {
+    display: none; /* Initially hide the input container */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Add space between card and input */
+    width: 100%;
+  }
+
+  .image-input-container input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .image-input-container button {
+    padding: 8px 16px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+
+  /* Responsive Media Query for Screens Smaller than 450px */
+  @media (max-width: 449px) {
+    .container {
+      width: 95%;
+      margin: 10px auto;
+    }
+
+    .image-wrapper {
+      aspect-ratio: 4 / 3;
+    }
+
+    .wishlist-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .wishlist-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .header-actions {
+      margin-top: 10px;
+      flex-direction: column; /* Stack buttons on small screens */
+      align-items: flex-start;
+    }
+
+    .search-icon,
+    .share-button,
+    .more-options {
+      margin-right: 0; /* Remove right margin on small screens */
+      margin-bottom: 5px; /* Add bottom margin for stacked buttons */
+    }
+
+    .user-info {
+      margin-bottom: 10px;
+    }
+
+    .navigation {
+      margin-bottom: 15px;
+    }
+
+    .new-wish-card {
+      width: 100%;
+      max-width: 150px;
+    }
+
+    .wish-item-container {
+      justify-content: flex-start;
+    }
+  }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230715/pngtree-d-rendering-of-a-relaxed-brunette-man-working-from-home-on-image_3850186.jpg" alt="" class="workaholic-image">
+        </div>
+
+        <div class="wishlist-container">
+            <div class="wishlist-header">
+                <h1 class="wishlist-title">My wishlist</h1>
+                <div class="header-actions">
+                    <nav class="navbar bg-body-tertiary">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                    </nav>
+
+                    <a class="nav-link share-icon" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-share"></i></a>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <i class="bi bi-person-circle"></i>
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <nav class="navbar bg-body-tertiary">
+                                <div class="container">
+                                    <a class="navbar-brand copy-link" href="#"> <i class="bi bi-copy"></i> CopyLink</a>
+                                </div>
+                            </nav>
+                            <nav class="navbar bg-body-tertiary">
+                                <div class="container">
+                                    <a class="navbar-brand" href="#"> <i class="bi bi-facebook"></i>  Facebook</a>
+                                </div>
+                            </nav>
+                            <nav class="navbar bg-body-tertiary">
+                                <div class="container">
+                                    <a class="navbar-brand" href="#"> <i class="bi bi-people-fill"></i> Gowish </a>
+                                </div>
+                            </nav>
+                            <nav class="navbar bg-body-tertiary">
+                                <div class="container">
+                                    <a class="navbar-brand" href="#"><i class="bi bi-envelope-arrow-up"></i> E-mail </a>
+                                </div>
+                            </nav>
+                        </nav>
+                        <nav class="navbar bg-body-tertiary">
+                            <div class="container">
+                                <a class="navbar-brand" href="#"><i class="bi bi-qr-code"></i> Share QR Code </a>
+                            </div>
+                        </nav>
+                    </div>    
+                    <span class="more-options"><i class="bi bi-three-dots"></i></span>
+                </div>
+            </div>
+
+            <button id="wishButton">+ New Wish</button>
+
+            <div id="imageContainer"></div>
+
+            <div id="inputModal" style="display: none;">
+                <div class="input-container">
+                    <input type="text" id="imageUrl" placeholder="Paste image URL here">
+                    <button id="addImageButton">Add Image</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="./project3.js" type="module"></script>
+</body>
+</html>

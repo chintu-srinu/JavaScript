@@ -1,0 +1,1366 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* width: 100%;
+  height: 200px;
+  background-image: url(https://play-lh.googleusercontent.com/Vy1W1gBdCvREHo6GonIWdeZq9Grm8GLMSnV0BYHgVK5wd0OK5LL24nDMq-qraLtu3g=w526-h296-rw); */
+  }
+  input{
+justify-content: center;
+align-items: center;
+text-align: center;
+  }
+  #link {
+width: 600px;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+text-align: center;
+margin: 10px 0; 
+margin-left: 100px;
+}
+.para4 {
+margin-left: 250px;
+}
+     .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  .input-container {
+      display: flex;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      background: #f8f9fa;
+  }
+  .input-container input {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      padding: 10px;
+  }
+  .paste-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .paste-button:hover {
+      background-color: #0056b3;
+  }
+  .error-message {
+      color: red;
+      display: none;
+      margin-top: 10px;
+  }
+  #submit-btn:hover {
+background-color: #0056b3;
+}
+.container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      background-color: #fff;
+  }
+  
+  /* Navigation styling */
+  .nav-tabs {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+  }
+  
+  .nav-link {
+      color: #6c757d;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+      background-color: #f8f9fa;
+  }
+  
+  .nav-link.active {
+      color: #0d6efd;
+      font-weight: 500;
+      border-bottom: 2px solid #0d6efd;
+  }
+  
+  /* Search bar styling */
+  .navbar {
+      padding: 10px 0;
+      margin-bottom: 20px;
+  }
+  
+  .input-group {
+      border: 1px solid #dee2e6;
+      border-radius: 50px;
+      overflow: hidden;
+      padding: 5px 15px;
+  }
+  
+  .input-group .nav-link {
+      padding: 5px;
+      margin-right: 5px;
+  }
+  
+  .form-control {
+      border: none;
+      box-shadow: none;
+      padding-left: 0;
+  }
+  
+  .form-control:focus {
+      box-shadow: none;
+  }
+  
+  /* Content area styling */
+  .content-area {
+      min-height: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      position: relative;
+  }
+  
+  /* Tab content styling */
+  .tab-content {
+      display: none;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  .tab-content.active {
+      display: block;
+  }
+  
+  /* Loader screen container */
+  .loader-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      display: none;
+  }
+  
+  .loader-screen.active {
+      display: flex;
+  }
+  
+  /* Spinner loader */
+  .spinner-loader {
+      border: 5px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 5px solid #0d6efd;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  
+  /* Dots loader */
+  .dots-loader {
+      display: flex;
+      margin: 0 auto;
+  }
+  
+  .dots-loader .dot {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      background-color: #0d6efd;
+      border-radius: 50%;
+      animation: dotPulse 1.5s infinite ease-in-out;
+  }
+  
+  .dots-loader .dot:nth-child(2) {
+      animation-delay: 0.2s;
+  }
+  
+  .dots-loader .dot:nth-child(3) {
+      animation-delay: 0.4s;
+  }
+  
+  @keyframes dotPulse {
+      0%, 100% { transform: scale(0.7); opacity: 0.5; }
+      50% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Pulse loader */
+  .pulse-loader {
+      width: 50px;
+      height: 50px;
+      background-color: #0d6efd;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0.8); opacity: 0.5; }
+  }
+  
+  /* Bar loader */
+  .bar-loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .bar-loader .bar {
+      width: 4px;
+      height: 18px;
+      margin: 0 3px;
+      background-color: #0d6efd;
+      border-radius: 2px;
+      animation: barLoader 1s infinite ease-in-out;
+  }
+  
+  .bar-loader .bar:nth-child(1) { animation-delay: 0s; }
+  .bar-loader .bar:nth-child(2) { animation-delay: 0.1s; }
+  .bar-loader .bar:nth-child(3) { animation-delay: 0.2s; }
+  .bar-loader .bar:nth-child(4) { animation-delay: 0.3s; }
+  .bar-loader .bar:nth-child(5) { animation-delay: 0.4s; }
+  
+  @keyframes barLoader {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(2); }
+  }
+  
+  /* Loader text */
+  .loader-text {
+      margin-top: 15px;
+      color: #6c757d;
+      font-size: 14px;
+  }
+  
+  /* Empty state styling */
+  /* .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      display: none;
+  }
+  
+  .empty-state.active {
+      display: block;
+  }
+  
+  .empty-state i {
+      font-size: 50px;
+      color: #d1d3d4;
+      margin-bottom: 20px;
+  }
+  
+  .empty-state h4 {
+      color: #6c757d;
+      margin-bottom: 10px;
+  }
+  
+  .empty-state p {
+      color: #adb5bd;
+  } */
+  .footer-section {
+background-color: #5bc0de; /* Light blue background */
+color: #fff;
+padding: 40px 20px;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.footer-brand {
+flex: 1 1 200px; /* Adjust width as needed */
+margin-bottom: 20px;
+}
+
+.footer-brand .logo {
+max-width: 150px; /* Adjust logo size */
+height: auto;
+}
+
+.footer-column {
+flex: 1 1 150px; /* Adjust width as needed */
+margin-bottom: 20px;
+}
+
+.footer-column h3 {
+font-size: 1.2em;
+margin-bottom: 10px;
+}
+
+.footer-column ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-column li {
+margin-bottom: 5px;
+}
+
+.footer-column li a {
+color: #fff;
+text-decoration: none;
+font-size: 0.9em;
+}
+
+.footer-column li a:hover {
+text-decoration: underline;
+}
+
+.download-app {
+text-align: center;
+}
+
+.download-app h3 {
+text-align: left;
+}
+
+.app-store,
+.google-play {
+display: block;
+margin-bottom: 10px;
+}
+
+.app-store img,
+.google-play img {
+max-width: 150px; /* Adjust badge size */
+height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.footer-content {
+  justify-content: space-between;
+}
+.footer-column {
+  flex: 1 1 calc(50% - 20px);
+  text-align: left;
+}
+.footer-brand {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.download-app {
+  flex-basis: 100%;
+  text-align: center;
+}
+.download-app h3 {
+  text-align: center;
+}
+}
+
+@media (max-width: 480px) {
+.footer-column {
+  flex-basis: 100%;
+}
+}
+/* .container {
+width: 2500px;
+height: 800px;
+background-image: url(https://play-lh.googleusercontent.com/Vy1W1gBdCvREHo6GonIWdeZq9Grm8GLMSnV0BYHgVK5wd0OK5LL24nDMq-qraLtu3g=w526-h296-rw);
+background-color: black;
+color: white;
+
+} */
+sub-container {
+width: 100%;
+height: 200px;
+border: 2px solid black;
+background-color: lightblue;
+position: relative; 
+}
+
+.sub-container> img {
+width: 100%; 
+position: absolute;
+bottom: 0;     
+left: 0;       
+}
+.container-2{
+width: 200px;
+height: 200px;
+background-color: lightblue;
+border: 2px solid black;
+position: absolute;
+bottom: -700px;
+}
+.share-icon {
+position: absolute;
+top: 50%;
+right: 0;
+transform: translateY(-50%);
+margin-right: 10px; /* Adjust spacing as needed */
+}
+
+sub-container {
+width: 100%;
+height: 200px;
+border: 2px solid black;
+background-color: lightblue;
+position: relative; /* To allow absolute positioning of the image */
+}
+
+sub-container img {
+width: 100%; 
+position: absolute;
+bottom: 0;      
+left: 0;        
+}
+
+.offcanvas-body .navbar {
+margin-bottom: 10px; 
+}
+sub-container {
+width: 200px;
+height: 200px;
+border: 2px solid black;
+background-color: lightblue;
+overflow: hidden; 
+}
+.inspiration-brands-container {
+      padding: 20px;
+      font-family: sans-serif;
+  }
+
+  .inspiration-section {
+      margin-bottom: 20px;
+  }
+
+  .inspiration-title {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+  }
+
+  .inspiration-title span {
+      font-size: 1em;
+      margin-left: 5px;
+  }
+
+  .inspiration-subtitle {
+      color: #777;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+  }
+
+  .brands-section {
+      margin-bottom: 20px;
+  }
+
+  .brands-title {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  .brand-logo-container {
+      width: 80px;
+      height: 80px;
+      background-color: #e0f7fa; /* Light teal background */
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .brand-logo {
+      width: 60%;
+      height: 60%;
+      background-color: #00bcd4; /* Teal cloud color */
+      border-radius: 50%; /* Make it oval-like */
+      position: relative;
+      overflow: hidden;
+  }
+
+  .brand-logo::before {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      left: 20%;
+      width: 60%;
+      height: 40%;
+      background-color: white;
+      border-radius: 50%;
+  }   
+.wishlist-container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+  }
+
+  .wishlist-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+  }
+
+  .wishlist-card-image-container {
+      position: relative;
+      height: 150px;
+  }
+
+  .wishlist-card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .wishlist-card-options {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #333;
+  }
+
+  .wishlist-card-options span {
+      /* Create the three dots */
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #333;
+      margin: 2px 0;
+  }
+
+  .wishlist-card-options span:not(:first-child) {
+      margin-left: 0;
+  }
+
+  .wishlist-card-content {
+      padding: 15px;
+  }
+
+  .wishlist-card-title {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+      color: #333;
+  }
+
+  .wishlist-card-details {
+      color: #777;
+      font-size: 0.9em;
+  }
+  .trending-container {
+      padding: 20px;
+  }
+
+  .trending-header {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #333;
+  }
+
+  .trending-cards-wrapper {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+  }
+
+  .trending-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      flex-shrink: 0; /* Prevent cards from shrinking */
+      overflow: hidden;
+  }
+
+  .card-image-container {
+      position: relative;
+      height: 140px;
+  }
+
+  .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card-options {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #333;
+  }
+
+  .card-options span {
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #333;
+      margin: 2px 0;
+  }
+
+  .card-content {
+      padding: 15px;
+  }
+
+  .card-title {
+      font-size: 1em;
+      margin-bottom: 5px;
+      color: #333;
+  }
+
+  .card-logo-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+  }
+
+  .card-logo {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #87CEEB; /* Placeholder color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 0.8em;
+      margin-right: 8px;
+  }
+
+  .card-info-text {
+      font-size: 0.9em;
+      color: #555;
+  }
+
+  .card-sponsored {
+      font-size: 0.8em;
+      color: #777;
+  }
+  .footer {
+      background-color: #2abde3; /* Match the blue background */
+      color: white;
+      padding: 40px 20px;
+  }
+
+  .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  .footer-column {
+      margin-bottom: 20px;
+  }
+
+  .footer-column h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .footer-column li {
+      margin-bottom: 5px;
+  }
+
+  .footer-column a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+  }
+
+  .footer-column a:hover {
+      text-decoration: underline;
+  }
+
+  .footer-logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+  }
+
+  .footer-logo img {
+      width: 30px; /* Adjust as needed */
+      height: 30px; /* Adjust as needed */
+      margin-right: 10px;
+  }
+
+  .download-app {
+      text-align: right;
+  }
+
+  .download-app h3 {
+      text-align: left;
+  }
+
+  .download-button {
+      margin-top: 10px;
+  }
+
+  .download-button img {
+      height: 40px; /* Adjust as needed */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .footer-container {
+          justify-content: space-around;
+      }
+
+      .footer-column {
+          width: calc(50% - 20px);
+      }
+
+      .download-app {
+          width: 100%;
+          text-align: left;
+          margin-top: 30px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .footer-column {
+          width: 100%;
+      }
+  }
+
+  #userDisplay {
+font-size: 22px;
+font-weight: bold;
+color: #333;
+margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Adjust aspect ratio as needed */
+}
+
+.workaholic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 479px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .image-wrapper {
+        aspect-ratio: 4 / 3; /* Adjust aspect ratio for smaller screens */
+    }
+}
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wishlist-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    margin-right: 10px;
+    cursor: pointer;
+    /* Add your search icon styling here (e.g., using a font icon library) */
+}
+
+.share-button {
+    background-color: #e0f7fa;
+    color: #00bcd4;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.share-icon {
+    margin-right: 5px;
+    /* Add your share icon styling here */
+}
+
+.more-options {
+    cursor: pointer;
+    /* Add styling for the three dots icon */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    background-color: #00bcd4;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #555;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.overview-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.wish-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.new-wish-card {
+    border: 1px dashed #ccc;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: #00bcd4;
+    cursor: pointer;
+}
+
+.add-icon {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.new-wish-text {
+    font-size: 14px;
+}
+
+.followers-info {
+    color: #00bcd4;
+    font-size: 14px;
+}
+
+/* Media query for screens less than 480px */
+@media (max-width: 479px) {
+    .wishlist-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+    }
+
+    .search-icon,
+    .share-button,
+    .more-options {
+        margin-right: 5px;
+    }
+
+    .wishlist-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .user-info {
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-bottom: 15px;
+    }
+
+    .new-wish-card {
+        width: 100%;
+        max-width: 150px; /* Maintain a maximum width if needed */
+    }
+
+    .wish-item-container {
+        justify-content: flex-start; /* Adjust item alignment on smaller screens */
+    }
+}  
+
+
+
+ #wishButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px dashed lightblue;
+    background-color: lightcyan;
+    color: teal;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#imageContainer {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.gallery-image {
+    max-width: 150px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-container {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.input-container button {
+    padding: 8px 15px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.input-container button:hover {
+    background-color: darkcyan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-cloudy-fill"></i>  <b>GO WISH</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="# Wishlist">Wishlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./html.html">Activity</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./html2.html">Inspiration</a>
+        </li>
+           </ul>
+            <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><b>ADD WISH</b></a>
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="#"data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> <i class="bi bi-people-fill"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="bi bi-bell-fill"></i></a>
+            
+            </li>
+            <li class="nav-item">
+                
+                <a class="nav-link" href="#"data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-person-circle"></i></a>
+            </li>
+            
+          </ul>
+      </div>
+    </div>
+  </nav>    
+  
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="offcanvas-body">
+  <a class="nav-link" href="#"><i class="bi bi-exclamation-circle"></i></a>
+  <p class="para4">ADD LIST</p>
+  <form id="productForm">
+      <div class="input-container">
+          <input type="text" placeholder="Insert product link" id="link">
+          <button type="button" id="paste-button" onclick="validateInput()">PASTE</button>
+      </div>
+      <p class="error-message" id="error">Please use a valid URL</p>
+  </form>
+</div>
+    </div> 
+
+   <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasUsername"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://gowish.com/assets/meta-image.png" alt="" width="30" height="24">
+                </a>
+            </div>
+        </nav>
+
+        <nav class="navbar bg-body-tertiary">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand menu-link" href="#" data-content="You are viewing reservations."> <i class="bi bi-door-open-fill"></i>
+                        Reservation </a>
+                </div>
+            </nav>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand menu-link" href="#" data-content="You have not saved any gifts."><i class="bi bi-gift"></i>
+                        Gifts </a>
+                </div>
+            </nav>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand menu-link" href="#" data-content="You are looking at your archive."> <i class="bi bi-cup-straw"></i>
+                        Archive </a>
+                </div>
+            </nav>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand menu-link" href="#" data-content="This is your account information."><i class="bi bi-person-circle"></i>
+                        Account </a>
+                </div>
+            </nav>
+        </nav>
+
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand menu-link" href="#" data-content="Need some help?"> <i class="bi bi-question-circle"></i>    Help    </a>
+            </div>
+        </nav>
+
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand menu-link" href="#" data-content="Learn more about us."> <i class="bi bi-door-open-fill"></i>    About </a>
+            </div>
+        </nav>
+    </div>
+    <input type="submit" value="LOGIN" id="submit-btn" >
+    <div id="content-display" style="padding: 20px;"></div>
+</div>
+
+    <!-- <div class="container"> -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body small">
+            <div class="notification-content">
+                <div class="loader-screen active" id="notification-loader">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="loader-text">Loading notifications...</p>
+                </div>
+
+                <div class="empty-state" id="no-notifications" style="display: none;">
+                    <i class="bi bi-envelope-x-fill"></i>
+                    <i class="bi bi-bell"></i> <span id="notification-badge" class="badge bg-danger"></span>
+                    <h4>No new notifications</h4>
+                    <p>You don't have any new messages.</p>
+                </div>
+
+                <ul class="list-group" id="notification-list" style="display: none;">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+<div class="offcanvas-header">
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<p><b>Friends</b></p>
+<div class="container">
+<nav class="nav-tabs">
+    <a class="nav-link active" data-tab="friends" aria-current="page" href="#">Friends</a>
+    <a class="nav-link" data-tab="request" href="#">Request</a>
+    <a class="nav-link" data-tab="suggested" href="#">Suggested</a>
+    <a class="nav-link" data-tab="creators" href="#">Creators</a>
+</nav>
+
+<nav class="navbar bg-body-tertiary">
+    <form class="container-fluid">
+        <div class="input-group">
+            <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+            <input type="text" class="form-control" id="searchInput" placeholder="Search">
+        </div>
+    </form>
+</nav>
+
+<div class="content-area">
+    <div class="tab-content active" id="friends-content">
+        <p>Your friends list will appear here.</p>
+    </div>
+
+    <div class="tab-content" id="request-content">
+        <p>Your friend requests will appear here.</p>
+    </div>
+
+    <div class="tab-content" id="suggested-content">
+        <p>Suggested friends will appear here.</p>
+    </div>
+
+    <div class="tab-content" id="creators-content">
+        <p>Creator accounts will appear here.</p>
+    </div>
+
+    <div class="loader-screen" id="spinner-loader">
+        <div class="spinner-loader"></div>
+        <p class="loader-text">Loading friends...</p>
+    </div>
+
+    <div class="loader-screen" id="dots-loader">
+        <div class="dots-loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <p class="loader-text">Loading requests...</p>
+    </div>
+
+    <div class="loader-screen" id="pulse-loader">
+        <div class="pulse-loader"></div>
+        <p class="loader-text">Loading suggestions...</p>
+    </div>
+
+    <div class="loader-screen" id="bar-loader">
+        <div class="bar-loader">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <p class="loader-text">Loading creators...</p>
+    </div>
+
+    <div class="empty-state" id="empty-state">
+        <i class="bi bi-emoji-frown"></i>
+        <h4>No items found</h4>
+        <p>We couldn't find any items to display.</p>
+    </div>
+</div>
+</div>
+</div>
